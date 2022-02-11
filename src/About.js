@@ -29,6 +29,16 @@ function About() {
                 <img src={pokemon.sprites['back_shiny']} height={200} />
               </LazyLoad>
             </div>
+            <div className='mt-4'>
+              <span>Type :</span>
+              <div className='mt-4'>
+                {
+                  pokemon.types.map((val, i) => (
+                    <span key={i} className='p-2 bg-slate-300 text-slate-900 mr-2'>{val.type.name}</span>
+                  ))
+                }
+              </div>
+            </div>
           </div>
         )
       }
